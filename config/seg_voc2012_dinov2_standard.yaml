@@ -1,0 +1,27 @@
+_1: &root_dir "./data"
+_2: &backbone_ckpt "./ckpt/dinov2_vitg14_pretrain.pth"
+#_2: &backbone_ckpt "./ckpt/condense_vitg14.pth"
+_3: &head_ckpt "./ckpt/dinov2_vitg14_voc2012_linear_head.pth"
+#_3: &head_ckpt "./ckpt/condense_vitg14_voc2012_linear_head.pth"
+
+
+debug: false
+exp_name: "seg_voc2012_eval"
+
+backbone:
+  name: "dinov2_vitg14"
+  ckpt: *backbone_ckpt
+
+head:
+  ckpt: *head_ckpt
+
+dataset:
+  name: "voc2012"
+  root: *root_dir
+  n_classes: 21
+
+segmentation:
+    test_slide_crop_size: [518, 518]
+    test_slide_stride: [345, 345]
+    test_size_minimum: 518
+    test_size_maximum: 2051

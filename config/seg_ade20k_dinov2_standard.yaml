@@ -1,0 +1,29 @@
+_1: &root_dir "./data"
+_2: &backbone_ckpt "./ckpt/dinov2_vitg14_pretrain.pth"
+#_2: &backbone_ckpt "./ckpt/condense_vitg14.pth"
+_3: &head_ckpt "./ckpt/dinov2_vitg14_ade20k_linear_head.pth"
+#_3: &head_ckpt "./ckpt/condense_vitg14_ade20k_linear_head.pth"
+
+
+debug: false
+exp_name: "seg_ade20k_eval"
+
+backbone:
+  name: "dinov2_vitg14"
+  ckpt: *backbone_ckpt
+
+head:
+  ckpt: *head_ckpt
+
+dataset:
+  name: "ade20k"
+  root: *root_dir
+  n_classes: 150
+  ade20k:
+    test_odgt: !join [ *root_dir, /ADEChallengeData2016/validation.odgt ]
+
+segmentation:
+    test_slide_crop_size: [518, 518]
+    test_slide_stride: [345, 345]
+    test_size_minimum: 518
+    test_size_maximum: 999999
