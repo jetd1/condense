@@ -1,5 +1,5 @@
 # condense
-ConDense backbone, weights, and evaluation code.
+ConDense backbone, weights, and evaluation code. This repo aims to replicate most of the main experiments covered in the ConDense paper.
 
 ## Prepare Environment
 ```bash
@@ -42,3 +42,12 @@ PYTHONPATH=. python ./scripts/eval_cls.py -c ./config/cls_imagenet_dinov2_standa
 PYTHONPATH=. python ./scripts/eval_cls.py -c ./config/cls_places205_dinov2_standard.yaml
 ```
 You can change the first several lines in `yaml` configs to switch between different backbones and weights.
+
+
+## TODOs
+- [ ] Graceful way to add support for Places205 dataset
+- [ ] Depth Evaluations
+- [ ] lin. 4 Evaluations
+- [ ] 2D Retrieval Evaluations
+- [ ] 3D Backbone Impl and Weights
+- [ ] 3D Backbone Evaluations
