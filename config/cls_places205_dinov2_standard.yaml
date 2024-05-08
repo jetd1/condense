@@ -1,0 +1,24 @@
+_1: &root_dir "./data/places205"
+_2: &backbone_ckpt "./ckpt/dinov2_vitg14_pretrain.pth"
+#_2: &backbone_ckpt "./ckpt/condense_vitg14.pth"
+_3: &head_ckpt "./ckpt/dinov2_vitg14_places205_linear_head.pth"
+#_3: &head_ckpt "./ckpt/condense_vitg14_places205_linear_head.pth"
+
+
+debug: false
+exp_name: "cls_places205_eval"
+
+backbone:
+  name: "dinov2_vitg14"
+  ckpt: *backbone_ckpt
+
+head:
+  ckpt: *head_ckpt
+
+dataset:
+  name: "places205"
+  root: *root_dir
+  n_classes: 202    # not a mistake
+
+classification:
+  test_image_size: [224, 224]

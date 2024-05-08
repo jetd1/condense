@@ -48,9 +48,9 @@ if __name__ == '__main__':
     if cfg.dataset.name == 'imagenet':
         from datasets.imagenet import ImageNetTestDataset
         dataset = ImageNetTestDataset(cfg)
-    # elif cfg.dataset.name == 'places205':
-    #     from datasets.places205 import Places205TestDataset
-    #     dataset = Places205TestDataset(cfg)
+    elif cfg.dataset.name == 'places205':
+        from datasets.places205 import Places205TestDataset
+        dataset = Places205TestDataset(cfg)
     else:
         raise NotImplementedError(f"Unknown Dataset {cfg.dataset.name}")
 

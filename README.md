@@ -9,13 +9,11 @@ ConDense backbone, weights, and evaluation code. This repo aims to replicate mos
 ## Prepare Data and Weights
 ```bash
 # Download data, replace {DATASET_NAME} with voc2012, ade20k, imagenet, or places205
-./scripts/download_{DATASET_NAME}.sh
+./scripts/download/dataset_{DATASET_NAME}.sh
 
 # Download weights, including ConDense, DINOv2, and corresponding head weights
-./scripts/download_ckpts.sh
+./scripts/download/checkpoints.sh
 ```
-
-The Places205 dataset was taken down by the original authors due to multiple concerns, and not supported in this repo.
 
 ## Evaluation Results
 
@@ -27,9 +25,10 @@ The Places205 dataset was taken down by the original authors due to multiple con
 | DinoV2-g14   | Segmentation   | ADE20k      | 48.989                    | 49.0              |
 | ConDense-g14 | Classification | ImageNet-1k | 90.130                    | 89.6              |
 | DinoV2-g14   | Classification | ImageNet-1k | 86.618                    | 86.5              |
-| ConDense-g14 | Classification | Places205   | -                         | 70.2              |
-| DinoV2-g14   | Classification | Places205   | -                         | 67.5              |
+| ConDense-g14 | Classification | Places205   | 71.396                    | 70.2              |
+| DinoV2-g14   | Classification | Places205   | 69.515                    | 67.5              |
 
+We used a custom split of validation set for Places205, since the original split is not available.
 
 ## Evaluate with Pretrained Weights
 ```bash
@@ -45,7 +44,7 @@ You can change the first several lines in `yaml` configs to switch between diffe
 
 
 ## TODOs
-- [ ] Graceful way to add support for Places205 dataset
+- [x] Add support for Places205 dataset
 - [ ] Depth Evaluations
 - [ ] lin. 4 Evaluations
 - [ ] 2D Retrieval Evaluations
