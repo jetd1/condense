@@ -48,5 +48,6 @@ You can change the first several lines in `yaml` configs to switch between diffe
 - [ ] Depth Evaluations
 - [ ] lin. 4 Evaluations
 - [ ] 2D Retrieval Evaluations
+- [x] 3D Env Docker / Set-Up Scripts
 - [ ] 3D Backbone Impl and Weights
 - [ ] 3D Backbone Evaluations
