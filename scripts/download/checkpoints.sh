@@ -15,8 +15,12 @@ wget -O ./ckpt/condense_vitg14_imagenet_linear_head.pth https://s3-haosu.nrp-nau
 wget -O ./ckpt/condense_vitg14_places205_linear_head.pth https://s3-haosu.nrp-nautilus.io/condense-release/condense_vitg14_places205_linear_head.pth
 
 # ConDense 3D backbone weights
-wget -O ./ckpt/condense_vitg14.pth https://s3-haosu.nrp-nautilus.io/condense-release/condense3d_minkunet34.pth
-wget -O ./ckpt/condense_vitg14.pth https://s3-haosu.nrp-nautilus.io/condense-release/condense3d_minkunet14.pth
-wget -O ./ckpt/condense_vitg14.pth https://s3-haosu.nrp-nautilus.io/condense-release/condense3d_minkresnet101.pth
+#wget -O ./ckpt/condense3d_vitg14_minkunet34.pth https://s3-haosu.nrp-nautilus.io/condense-release/condense3d_minkunet34.pth
+wget -O ./ckpt/condense3d_minkunet14.pth https://s3-haosu.nrp-nautilus.io/condense-release/condense3d_minkunet14.pth
+#wget -O ./ckpt/condense3d_vitg14_minkresnet101.pth https://s3-haosu.nrp-nautilus.io/condense-release/condense3d_minkresnet101.pth
 
 # ConDense 3D head weights
+wget -O ./ckpt/condense3d_scanobjectnn_head.pth https://s3-haosu.nrp-nautilus.io/condense-release/condense3d_scanobjectnn_head.pth
+wget -O ./ckpt/condense3d_model40_head.pth https://s3-haosu.nrp-nautilus.io/condense-release/condense3d_model40_head.pth
+wget -O ./ckpt/condense3d_s3dis_head.pth https://s3-haosu.nrp-nautilus.io/condense-release/condense3d_s3dis_head.pth
+wget -O ./ckpt/condense3d_scannet_head.pth https://s3-haosu.nrp-nautilus.io/condense-release/condense3d_scannet_head.pth

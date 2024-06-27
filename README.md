@@ -39,15 +39,18 @@ PYTHONPATH=. python ./scripts/eval_seg.py -c ./config/seg_ade20k_dinov2_standard
 # Classification
 PYTHONPATH=. python ./scripts/eval_cls.py -c ./config/cls_imagenet_dinov2_standard.yaml
 PYTHONPATH=. python ./scripts/eval_cls.py -c ./config/cls_places205_dinov2_standard.yaml
+
+# 3D Benchmarks
+PYTHONPATH=. python ./scripts/eval_3d.py
 ```
 You can change the first several lines in `yaml` configs to switch between different backbones and weights.
 
 
 ## TODOs
 - [x] Add support for Places205 dataset
-- [ ] Depth Evaluations
-- [ ] lin. 4 Evaluations
 - [x] 3D Env Docker / Set-Up Scripts
 - [x] 3D Backbone Impl and Weights
-- [ ] 3D Backbone Evaluations
+- [x] 3D Backbone Evaluations
+- [ ] Update README
+- [ ] Depth Evaluations
 - [ ] Online Query Demos
